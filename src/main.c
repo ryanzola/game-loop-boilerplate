@@ -44,7 +44,7 @@ int initialize_window() {
     return FALSE;
   }
 
-  font = TTF_OpenFont("assets/pong-score.ttf", 64);
+  font = initialize_font("assets/pong-score.ttf", 64);
   if (!font) {
     fprintf(stderr, "Error loading font: %s\n", TTF_GetError());
     return FALSE;
@@ -54,7 +54,6 @@ int initialize_window() {
 }
 
 void setup() {
-  font = initialize_font("assets/pong-score.ttf", 64);
   game_setup();
 }
 
