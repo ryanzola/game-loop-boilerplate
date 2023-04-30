@@ -1,5 +1,5 @@
-CFLAGS = -Wall -Wfatal-errors -std=c99
-LDFLAGS = -framework OpenGL
+CFLAGS = -Wall -Wfatal-errors -std=c99 `pkg-config --cflags SDL2_ttf`
+LDFLAGS = -framework OpenGL `pkg-config --libs SDL2_ttf`
 
 .PHONY: build run clean
 
